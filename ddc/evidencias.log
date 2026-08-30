@@ -12,3 +12,76 @@ compile OK
 exit
 
 Script done on 2026-08-30 17:20:55-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-30 17:32:49-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="218" LINES="16"]
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ date; whoami; pwds[K
+[?2004lSun Aug 30 17:32:55 -03 2026
+danie
+/home/danie/mandelbrot
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ cat > ddc/Makefile
+[?2004lcat ddc/Makefile
+^C
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ make -C ddc -n
+[?2004lmake: Entering directory '/home/danie/mandelbrot/ddc'
+gcc -O2 -Wall -Wextra -fopenmp -pthread -c main.c -o main.o
+gcc -O2 -Wall -Wextra -fopenmp -pthread -c compute.c -o compute.o
+gcc -O2 -Wall -Wextra -fopenmp -pthread -c parallel.c -o parallel.o
+gcc main.o compute.o parallel.o -o mandelbrot -fopenmp -pthread -lm
+make: Leaving directory '/home/danie/mandelbrot/ddc'
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ cat ddc/Makefiul[K[Kle
+[?2004lCC = gcc
+CFLAGS = -O2 -Wall -Wextra -fopenmp -pthread
+LDFLAGS = -fopenmp -pthread -lm
+OBJS = main.o compute.o parallel.o
+TARGET = mandelbrot
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET) $(LDFLAGS)
+	
+%.o: %.c mandelbrot.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET) *.pgm times.txt[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-30 17:41:16-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-30 17:41:45-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="218" LINES="16"]
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ date; whoami; pwd
+[?2004lSun Aug 30 17:41:51 -03 2026
+danie
+/home/danie/mandelbrot
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ gcc -Wall -c ddc/parallel.c fopenmp -pthread -o /tmp/p.o && echo ok
+[?2004l[01m[Kddc/parallel.c:[m[K In function ‘[01m[Kcompute_openmp[m[K’:
+[01m[Kddc/parallel.c:5:[m[K [01;35m[Kwarning: [m[Kignoring ‘[01m[K#pragma omp parallel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unknown-pragmas-Wunknown-pragmas]8;;[m[K]
+    5 |     #pragma omp parallel for schedule(static) collapse(2)
+[01m[Kddc/parallel.c:[m[K In function ‘[01m[Kcompute_pthreads1[m[K’:
+[01m[Kddc/parallel.c:36:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kì[m[K’ undeclared (first use in this function)
+   36 |         args[i]=(threads_args_t){[01;31m[Kì[m[K, w, h, max, nthreads, out};
+      |                                  [01;31m[K^[m[K
+[01m[Kddc/parallel.c:36:34:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kddc/parallel.c:[m[K In function ‘[01m[Kworker_interleaved[m[K’:
+[01m[Kddc/parallel.c:44:37:[m[K [01;35m[Kwarning: [m[Kstatement with no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-value-Wunused-value]8;;[m[K]
+   44 |     for(int row=a->id; row<a->h; [01;35m[Krow+a->nthreads[m[K){
+      |                                  [01;35m[K~~~^~~~~~~~~~~~[m[K
+[01m[Kddc/parallel.c:49:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   49 |             a->out[row*a->w+col] = iter * 255 / a->max
+      |                                                       [01;31m[K^[m[K
+      |                                                       [32m[K;[m[K
+   50 |         [32m[K}[m[K
+      |         [32m[K~[m[K                                              
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [7m gcc -Wall -c ddc/parallel.c -fopenmp -pthread -o /tmp/p.o && echo ok[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C gcc -Wall -c ddc/parallel.c -fopenmp -pthread -o /tmp/p.o && echo ok
+[?2004l[01m[Kddc/parallel.c:[m[K In function ‘[01m[Kworker_interleaved[m[K’:
+[01m[Kddc/parallel.c:49:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   49 |             a->out[row*a->w+col] = iter * 255 / a->max
+      |                                                       [01;31m[K^[m[K
+      |                                                       [32m[K;[m[K
+   50 |         [32m[K}[m[K
+      |         [32m[K~[m[K                                              
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [7m gcc -Wall -c ddc/parallel.c -fopenmp -pthread -o /tmp/p.o && echo ok[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C gcc -Wall -c ddc/parallel.c -fopenmp -pthread -o /tmp/p.o && echo ok
+[?2004lok
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [K]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-30 18:18:58-03:00 [COMMAND_EXIT_CODE="0"]
