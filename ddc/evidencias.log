@@ -1,0 +1,14 @@
+Script started on 2026-08-30 17:19:44-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="218" LINES="16"]
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ date;whoami[C[1@ [C[C[C[C[C[C; pwd
+[?2004l
+Sun Aug 30 17:20:05 -03 2026
+danie
+/home/danie/mandelbrot
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ gcc -Wall -c ddc/compute.c -o tm[K[K[K /tmp/test.o && echo "compile OK"
+[?2004l
+compile OK
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ exit
+[?2004l
+exit
+
+Script done on 2026-08-30 17:20:55-03:00 [COMMAND_EXIT_CODE="0"]
