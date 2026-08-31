@@ -18,7 +18,12 @@ static int write_pgm(const char *fname, int w, int h, int *img){
     FILE *f=fopen(fname, "w");
     for(int r=0; r<h; r++){
         for(int c=0; c<w; c++){
-            fprintf(f, "%d %c", img[r*w+c], c==w-1);
+            fprintf(f, "%d", img[r*w+c]);
+            if(c == w-1){
+                fprintf(f, "\n");
+            }else{
+                fprintf(f," ");
+            }
         }
     }
     fclose(f); return 1;

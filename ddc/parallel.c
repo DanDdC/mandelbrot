@@ -2,7 +2,7 @@
 
 void compute_openmp(int w, int h, int max, int *out, int nthreads){
     omp_set_num_threads(nthreads);
-    #pragma omp parallel for schedule(static) collapse(2)
+    #pragma omp parallel for
     for(int row=0; row<h; row++){
         for(int col=0; col<w; col++){
             double cx = -2.0 + col*3.0/w;
@@ -18,6 +18,9 @@ static void* worker_block(void *arg){
     int rows_per = a->h / a->nthreads;
     int start = a->id * rows_per;
     int end = start+rows_per;
+    if(a->id == a->nthreads -1){
+        end = a->h;
+    }
     for(int row=start; row<end; row++){
         for(int col=0; col<a->w;col++){
             double cx = -2.0 + col*3.0/a->w;
