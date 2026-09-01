@@ -116,3 +116,19 @@ int main(int argc, char *argv[]){
         free(img);
         return 1;
     }
+
+    FILE *tf = fopen("times.txt", "w");
+    if(tf == NULL){
+        fprintf(stderr, "Erro: times.txt\n");
+        free(img);
+        return 1;
+    }
+    fprintf(tf, "Serial: %.6fs\n", ts);
+    fprintf(tf, "OpenMP: %.6fs\n", to);
+    fprintf(tf, "Pthreads1: %.6fs\n", tp1);
+    fprintf(tf, "Pthreads2: %.6fs\n", tp2);
+    fclose(tf);
+
+    free(img);
+    return 0;
+}

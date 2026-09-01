@@ -156,4 +156,9 @@ danie
       |            [01;35m[K^~~[m[K
 [?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [7mgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"
 [?2004l[01m[Kddc/main.c:[m[K In function ‘[01m[Kmain[m[K’:
-[01m[Kddc/main.c:77:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kts[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-O
+[01m[Kddc/main.c:77:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kts[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   77 |     double [01;35m[Kts[m[K;
+      |            [01;35m[K^~[m[K
+main ok
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ 
+Script done on 2026-09-01 20:36:49-03:00 [COMMAND_EXIT_CODE="0"]
