@@ -1,3 +1,4 @@
+#define _POSIX_C_SOURCE 199309L
 #include "mandelbrot.h"
 #include <string.h>
 #include <errno.h>
@@ -66,4 +67,22 @@ int main(int argc, char *argv[]){
         fprintf(stderr, "Erro: num_threads invalido\n");
         return 1;
     }
-}
+
+    int *img = malloc(W * H * sizeof(int));
+    if(img == NULL){
+        fprintf(stderr, "Erro: malloc\n");
+        return 1;
+    }
+
+    struct timespec t0, t1;
+    double ts, to, tp1, tp2;
+
+    clock_gettime(CLOCK_MONOTONIC, &t0);
+    compute_serial(W, H, MAX, img);
+    clock_gettime(CLOCK_MONOTONIC, &t1);
+    ts = diff_sec(t0, t1);
+    if(write_pgm("mandelbrot_ddc_serial.pgm", W, H, img) == 0){
+        fprintf(stderr, "Erro: arquivo serial\n");
+        free(img);
+        return 1;
+    }

@@ -122,3 +122,38 @@ static int write_pgm(const char *fname, int w, int h, int *img){
 [?2004lexit
 
 Script done on 2026-08-30 20:55:28-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-01 19:40:42-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="222" LINES="11"]
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ date;wj[K[K whoami; pwd
+[?2004lTue Sep  1 19:40:50 -03 2026
+danie
+/home/danie/mandelbrot
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [7mgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"[C
+[?2004l[01m[Kddc/main.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kddc/main.c:87:5:[m[K [01;31m[Kerror: [m[Kexpected declaration or statement at end of input
+   87 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+[01m[Kddc/main.c:77:25:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktp2[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+   77 |     double ts, to, tp1, [01;35m[Ktp2[m[K;
+      |                         [01;35m[K^~~[m[K
+[01m[Kddc/main.c:77:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktp1[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+   77 |     double ts, to, [01;35m[Ktp1[m[K, tp2;
+      |                    [01;35m[K^~~[m[K
+[01m[Kddc/main.c:77:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kto[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+   77 |     double ts, [01;35m[Kto[m[K, tp1, tp2;
+      |                [01;35m[K^~[m[K
+[01m[Kddc/main.c:77:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kts[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   77 |     double [01;35m[Kts[m[K, to, tp1, tp2;
+      |            [01;35m[K^~[m[K
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [7mgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"
+[?2004l[01m[Kddc/main.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kddc/main.c:82:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kts[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kt1[m[K’?
+   82 |     [01;31m[Kts[m[K = diff_sec(t0, t1);
+      |     [01;31m[K^~[m[K
+      |     [32m[Kt1[m[K
+[01m[Kddc/main.c:82:5:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kddc/main.c:77:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktp2[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-variable-Wunused-variable]8;;[m[K]
+   77 |     double [01;35m[Ktp2[m[K;
+      |            [01;35m[K^~~[m[K
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ [7mgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -Wall -Wextra -fopenmp -pthread -c ddc/main.c -o /tmp/m.o && echo "main ok"
+[?2004l[01m[Kddc/main.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kddc/main.c:77:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kts[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-O
