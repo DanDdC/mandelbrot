@@ -86,3 +86,13 @@ int main(int argc, char *argv[]){
         free(img);
         return 1;
     }
+
+    clock_gettime(CLOCK_MONOTONIC, &t0);
+    compute_openmp(W, H, MAX, img, NTH);
+    clock_gettime(CLOCK_MONOTONIC, &t1);
+    to = diff_sec(t0, t1);
+    if(write_pgm("mandelbrot_ddc_openmp.pgm", W, H, img) == 0){
+        fprintf(stderr, "Erro: arquivo openmp\n");
+        free(img);
+        return 1;
+    }
