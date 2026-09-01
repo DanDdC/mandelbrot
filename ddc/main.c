@@ -96,3 +96,23 @@ int main(int argc, char *argv[]){
         free(img);
         return 1;
     }
+
+     clock_gettime(CLOCK_MONOTONIC, &t0);
+    compute_pthreads1(W, H, MAX, img, NTH);
+    clock_gettime(CLOCK_MONOTONIC, &t1);
+    tp1 = diff_sec(t0, t1);
+    if(write_pgm("mandelbrot_ddc_pthreads1.pgm", W, H, img) == 0){
+        fprintf(stderr, "Erro: arquivo pthreads1\n");
+        free(img);
+        return 1;
+    }
+
+    clock_gettime(CLOCK_MONOTONIC, &t0);
+    compute_pthreads2(W, H, MAX, img, NTH);
+    clock_gettime(CLOCK_MONOTONIC, &t1);
+    tp2 = diff_sec(t0, t1);
+    if(write_pgm("mandelbrot_ddc_pthreads2.pgm", W, H, img) == 0){
+        fprintf(stderr, "Erro: arquivo pthreads2\n");
+        free(img);
+        return 1;
+    }
