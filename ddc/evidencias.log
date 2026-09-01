@@ -162,3 +162,30 @@ danie
 main ok
 [?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ 
 Script done on 2026-09-01 20:36:49-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-01 20:51:08-03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="222" LINES="11"]
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ script -a ddc/evidencias.log[7Popencode --port 26080[K --port 36532script -a ddc/evidencias.log[2Pgit rm --cached .gitignorescript -a ddc/evidencias.log[2Pgit rm --cached .gitignorescript -a ddc/evidencias.log[4P[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kcat ddc/main.cexit[Kscript -a evidencias.log[4@ddc/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pgit rm --cached .gitignorescript -a ddc/evidencias.log[7Popencode --port 36532[K --port 26080[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdate; whoami; pwd;[K
+[?2004lTue Sep  1 20:51:23 -03 2026
+danie
+/home/danie/mandelbrot
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ make -C ddc
+[?2004lmake: Entering directory '/home/danie/mandelbrot/ddc'
+gcc -O2 -Wall -Wextra -fopenmp -pthread -c main.c -o main.o
+gcc -O2 -Wall -Wextra -fopenmp -pthread -c compute.c -o compute.o
+gcc -O2 -Wall -Wextra -fopenmp -pthread -c parallel.c -o parallel.o
+gcc main.o compute.o parallel.o -o mandelbrot -fopenmp -pthread -lm
+make: Leaving directory '/home/danie/mandelbrot/ddc'
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ ./ddc/mandelbrot 4 4 50 1
+[?2004l[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ dc ddc
+[?2004lCommand 'dc' not found, but can be installed with:
+sudo apt install dc
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot[00m$ cd ddc
+[?2004l[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot/ddc[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot/ddc[00m$ ./mandelbrot 3[K4 4 50 1
+[?2004l[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot/ddc[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot/ddc[00m$ cat times.txt
+[?2004lSerial: 0.000001s
+OpenMP: 0.000006s
+Pthreads1: 0.000133s
+Pthreads2: 0.000127s
+[?2004h]0;danie@PCDEDANIEL: ~/mandelbrot/ddc[01;32mdanie@PCDEDANIEL[00m:[01;34m~/mandelbrot/ddc[00m$ exity[K
+[?2004lexit
+
+Script done on 2026-09-01 20:57:24-03:00 [COMMAND_EXIT_CODE="0"]
